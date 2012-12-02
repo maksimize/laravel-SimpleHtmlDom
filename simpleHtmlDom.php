@@ -51,6 +51,10 @@ class SimpleHtmlDom {
 	 */
 	public function first()
 	{
+		if(empty($this->array))
+			return null;
+		
+		reset($this->array);
 		return current($this->array);
 	}
 }
