@@ -17,5 +17,7 @@ results
 
 ### Get more than text ###
 ``$dom = SimpleHtmlDom::url('http://example.com/');``
+
 ``$href = $dom->get('div[class=nav] a', 'href')->first();``
+
 ``$src = $dom->get('div[class=galary] img', 'src')->first();``
