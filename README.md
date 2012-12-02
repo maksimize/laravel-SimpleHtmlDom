@@ -8,14 +8,14 @@ http://simplehtmldom.sourceforge.net/
 
 ## Usage ##
 
-### get single text ###
+### Get single text ###
 ``$text = SimpleHtmlDom::url('http://laravel.com/')->get('div[class=bundles] h3')->first();``
+
 results
+
 ``GRAB SOME BUNDLES``
 
-### get more than text ###
-``
-$dom = SimpleHtmlDom::url('http://example.com/');
-$href = $dom->get('div[class=nav] a', 'href')->first();
-$src = $dom->get('div[class=galary] img', 'src')->first();
-``
+### Get more than text ###
+``$dom = SimpleHtmlDom::url('http://example.com/');``
+``$href = $dom->get('div[class=nav] a', 'href')->first();``
+``$src = $dom->get('div[class=galary] img', 'src')->first();``
