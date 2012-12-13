@@ -38,11 +38,25 @@ class SimpleHtmlDom {
 	 */
 	public function get($nodes, $attribute = 'innertext')
 	{
+		$this->array = array();
         foreach ($this->dom->find($nodes) as $node) {
             $this->array[] = trim( $node->$attribute );
         }
         return $this;
 	}
+
+	/**
+	 * Get the all elemrents of array of node attribute value
+	 *
+	 * @return array
+	 */
+	public function all()
+	{
+		if(empty($this->array))
+			return null;
+		
+		return $this->array;
+	}	
 
 	/**
 	 * Get the first elemrent of array of node attribute value
