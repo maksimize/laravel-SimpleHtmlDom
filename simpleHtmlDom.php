@@ -15,6 +15,7 @@ class SimpleHtmlDom {
 
 	private $dom;
 	private $array;
+	private $error;
 
 	/**
 	 * take the file url and make a simpleHtmlDom object
@@ -26,6 +27,10 @@ class SimpleHtmlDom {
 	{
 		$shd = new SimpleHtmlDom();
         $shd->dom = file_get_html($url);
+
+        if(!$shd->dom)
+			$shd->error = 'Failed to open stream: HTTP request failed!'; // Typical 404
+
         return $shd;
     }
 
