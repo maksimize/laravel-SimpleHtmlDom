@@ -76,4 +76,15 @@ class SimpleHtmlDom {
 		reset($this->array);
 		return current($this->array);
 	}
+
+	/**
+	 * Get error that might have occurred while getting content of supplied
+	 * URL
+	 *
+	 * @return string
+	 */
+	public function get_error()
+	{
+		return $this->error;
+	}
 }
